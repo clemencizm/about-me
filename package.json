@@ -1,0 +1,14 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "sass": "sass --watch styles/scss:styles/css"
+  },
+  "dependencies": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
