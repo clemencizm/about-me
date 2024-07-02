@@ -7,11 +7,20 @@ const wordsTitle = ['a creative', 'an analytical', 'a technical'];
 const selectWords = document.querySelector('#words');
 let index = 0;
 
-setInterval(() => {
-  selectWords.innerText = wordsTitle[index];
-  index = (index + 1) % wordsTitle.length;
-}, 1000);
+function showNextWord() {
+  selectWords.style.opacity = 0;
 
+  setTimeout(() => {
+      selectWords.innerText = wordsTitle[index];
+      index = (index + 1) % wordsTitle.length;
+      // Fade in
+      selectWords.style.opacity = 1;
+    }, 500); // Match this delay with the CSS transition duration
+  }
 
-// closes the DOM conditional opened at the begining of the doc.
+  // Initialize first word
+  selectWords.style.opacity = 1;
+
+  setInterval(showNextWord, 2000);
 }
+// closes the DOM conditional opened at the begining of the doc.
