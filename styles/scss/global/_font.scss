@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+$sans-serif: "Poppins", sans-serif;
+$serif: Merriweather, "Times New Roman", serif;
+
+$normal: 400;
+$bold: 700;
+
+
+//Heading
+
+@mixin font-heading1-regular {
+  /* Heading 1/Regular */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 105%;
+  color: #024938;
+
+  /* identical to box height, or 105% */
+}
+
+@mixin font-heading1-semibold {
+  /* Heading 1/Semibold */
+  font-size: 100px;
+  line-height: 105%;
+  /* identical to box height, or 105% */
+}
+
+@mixin font-heading2-regular {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 112%;
+  /* identical to box height, or 112% */
+  color: #000000;
+}
+
+@mixin font-paragraph1-book {
+  font-size: 14px;
+}
+
+//Article
+
+@mixin font-article1-regular {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  /* identical to box height, or 129% */
+  color: #000000;
+}
+
+body {
+  font-family: $sans-serif;
+  font-weight: $normal;
+  // color: $txt-primary; //color variable set elsewhere
+  // background: $body-bg;
+  -webkit-text-size-adjust: 100%; //fix for iOS
+}
+
+h1, .h1 {
+  @include font-heading1-regular;
+  }
+
+  h2, .h2 {
+  @include font-heading2-regular;
+  }
+
+  p {
+    @include font-paragraph1-book;
+  }
+
+  .b {
+    font-weight: 800;
+  }
