@@ -1,4 +1,4 @@
-const urlPageTitle = "JS SPA Routing";
+const urlPageTitle = "Clémence L.C. : Senior UX-UI designer | FrontEnd Developer";
 
 document.addEventListener("click", (e) => {
   const { target } = e;
@@ -19,7 +19,7 @@ const urlRoutes = {
   "/": {
     template: "/templates/home.html", // Adjusted path for the homepage content
     title: "Home " + urlPageTitle,
-    description: "This is the homepage",
+    description: "Welcome to my profile page. I am Clémence, Senior UX-UI designer | FrontEnd Developer",
   },
   "/about": {
     template: "/templates/about.html",
