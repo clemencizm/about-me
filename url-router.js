@@ -17,7 +17,7 @@ const urlRoutes = {
     description: "Page not found",
   },
   "/": {
-    template: "/templates/home.html", // Adjusted path for the homepage content
+    template: "/templates/home.html",
     title: "Home " + urlPageTitle,
     description: "Welcome to my profile page. I am Clémence, Senior UX-UI designer | FrontEnd Developer",
   },
@@ -64,10 +64,12 @@ const urlLocationHandler = async () => {
     document.querySelector('meta[name="description"]').setAttribute("content", route.description);
     console.log("Loaded content for:", location); // Debugging log
 
-    // Load the script.js file dynamically after content is loaded
-    if (location === "/") {
-      loadScript('js/script.js', initializeHomeScripts);
-    }
+    // Dynamically import main.js and reinitialize scripts
+    import('./js/main.js').then(module => {
+      module.initializeScripts(location);
+    }).catch(error => {
+      console.error("Error loading main.js:", error);
+    });
 
   } catch (error) {
     console.error("Error loading page:", error); // Debugging log
@@ -75,14 +77,6 @@ const urlLocationHandler = async () => {
     document.title = "Error " + urlPageTitle;
     document.querySelector('meta[name="description"]').setAttribute("content", "Error loading page");
   }
-};
-
-// Function to load external scripts dynamically
-const loadScript = (src, callback) => {
-  const script = document.createElement('script');
-  script.src = src;
-  script.onload = callback;
-  document.body.appendChild(script);
 };
 
 // Call urlLocationHandler when the page loads
