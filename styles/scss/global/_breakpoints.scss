@@ -1,0 +1,10 @@
+$sm: 480px; //mobile
+$md: 768px; //tablet
+$lg: 1024px; //laptop
+
+// key needs to have same name as value variable for the mapping in typography.scss
+$breakpoint-map: (
+  'sm': $sm,
+  'md': $md,
+  'lg': $lg,
+);

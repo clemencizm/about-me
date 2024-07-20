@@ -1,21 +1,134 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+.display1 {
+  font-size: 68px;
+}
+
+.display2 {
+  font-size: 52px;
+}
+
+.h1 {
+  font-size: 36px;
+}
+
+.h2 {
+  font-size: 30px;
+}
+
+.h3 {
+  font-size: 24px;
+}
+
+.h4 {
+  font-size: 22px;
+}
+
+.h5 {
+  font-size: 18px;
+}
+
+.h6 {
+  font-size: 16px;
+}
+
+.p {
+  font-size: 14px;
+}
+
+@media (min-width: 480px) {
+  .display1-sm {
+    font-size: 68px;
+  }
+  .display2-sm {
+    font-size: 52px;
+  }
+  .h1-sm {
+    font-size: 36px;
+  }
+  .h2-sm {
+    font-size: 30px;
+  }
+  .h3-sm {
+    font-size: 24px;
+  }
+  .h4-sm {
+    font-size: 22px;
+  }
+  .h5-sm {
+    font-size: 18px;
+  }
+  .h6-sm {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .display1-md {
+    font-size: 68px;
+  }
+  .display2-md {
+    font-size: 52px;
+  }
+  .h1-md {
+    font-size: 36px;
+  }
+  .h2-md {
+    font-size: 30px;
+  }
+  .h3-md {
+    font-size: 24px;
+  }
+  .h4-md {
+    font-size: 22px;
+  }
+  .h5-md {
+    font-size: 18px;
+  }
+  .h6-md {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .display1-lg {
+    font-size: 68px;
+  }
+  .display2-lg {
+    font-size: 52px;
+  }
+  .h1-lg {
+    font-size: 36px;
+  }
+  .h2-lg {
+    font-size: 30px;
+  }
+  .h3-lg {
+    font-size: 24px;
+  }
+  .h4-lg {
+    font-size: 22px;
+  }
+  .h5-lg {
+    font-size: 18px;
+  }
+  .h6-lg {
+    font-size: 16px;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
 }
 
-h1, .h1 {
+.heading-h1 {
   /* Heading 1/Regular */
   font-style: normal;
   font-weight: 400;
-  font-size: 100px;
   line-height: 105%;
   color: #024938;
   /* identical to box height, or 105% */
 }
 
-h2, .h2 {
+.h2 {
   font-style: normal;
   font-weight: 400;
   font-size: 80px;

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@import './variables';
+@import './breakpoints';
+
+
+.display1 {
+  font-size: $display1;
+}
+
+.display2 {
+  font-size: $display2;
+}
+
+.h1 {
+  font-size: $h1;
+}
+
+.h2 {
+  font-size: $h2;
+}
+
+.h3 {
+  font-size: $h3;
+}
+
+.h4 {
+  font-size: $h4;
+}
+
+.h5 {
+  font-size: $h5;
+}
+
+.h6 {
+  font-size: $h6;
+}
+
+.p {
+  font-size: $p;
+}
+
+// calling the mapping in breakpoint.scss
+@each $breakpoint-name, $breakpoint-width in $breakpoint-map {
+  @media (min-width: $breakpoint-width) {
+    .display1-#{$breakpoint-name} {
+      font-size: $display1;
+    }
+
+    .display2-#{$breakpoint-name} {
+      font-size: $display2;
+    }
+
+    .h1-#{$breakpoint-name} {
+      font-size: $h1;
+    }
+
+    .h2-#{$breakpoint-name} {
+      font-size: $h2;
+    }
+
+    .h3-#{$breakpoint-name} {
+      font-size: $h3;
+    }
+
+    .h4-#{$breakpoint-name} {
+      font-size: $h4;
+    }
+
+    .h5-#{$breakpoint-name} {
+      font-size: $h5;
+    }
+
+    .h6-#{$breakpoint-name} {
+      font-size: $h6;
+    }
+  }
+}
+
+
+
+
+//––––––––––––––––––––––––––––––
+//  Heading
+
+@mixin font-heading1-regular {
+  /* Heading 1/Regular */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 105%;
+  color: #024938;
+
+  /* identical to box height, or 105% */
+}
+
+@mixin font-heading1-semibold {
+  /* Heading 1/Semibold */
+  line-height: 105%;
+  /* identical to box height, or 105% */
+}
+
+@mixin font-heading2-regular {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 112%;
+  /* identical to box height, or 112% */
+  color: #000000;
+}
+
+@mixin font-paragraph1-book {
+  font-size: 14px;
+}
+
+//Article
+
+@mixin font-article1-regular {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  /* identical to box height, or 129% */
+  color: #000000;
+}
+
+body {
+  font-family: $sans-serif;
+  font-weight: $normal;
+  // color: $txt-primary; //color variable set elsewhere
+  // background: $body-bg;
+  -webkit-text-size-adjust: 100%; //fix for iOS
+}
+
+
+.heading-h1 {
+  @include font-heading1-regular;
+}
+
+.h2 {
+  @include font-heading2-regular;
+}
+
+p {
+  @include font-paragraph1-book;
+}
+
+.b {
+  font-weight: 800;
+}
